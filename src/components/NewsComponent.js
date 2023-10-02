@@ -7,7 +7,7 @@ export class NewsComponent extends Component {
         <>
       <div className="my-3">
         <div className="card">
-        <span class="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{left:'90%', zIndex:'1'}}>
+        <span className="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{left:'90%', zIndex:'1'}}>
       {source}</span>
   <img src={!imgUrl?"https://ichef.bbci.co.uk/news/1024/branded_news/8D21/production/_131292163_6749f9d4a61ea749f5db87c265917df912f29bb5.jpg":imgUrl} 
   className="card-img-top" alt="..."/>
