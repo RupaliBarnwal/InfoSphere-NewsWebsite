@@ -21,7 +21,7 @@ const App =()=>{
     
     return (
       <div>
-        <Router>
+        <Router basename="/app">
           {/* loading bar---- */}
 
         <LoadingBar
