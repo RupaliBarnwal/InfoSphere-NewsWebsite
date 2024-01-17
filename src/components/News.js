@@ -17,8 +17,7 @@ const News = (props) => {
 
   const updateNews = async () => {
     props.setProgress(0);
-    let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&
-        page=${page}&pageSize=${props.pageSize}`;
+    let url = `https://gnews.io/api/v4/top-headlines?country=${props.country}&category=${props.category}&apikey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
     setLoading(true)
     let data = await fetch(url);
     props.setProgress(30);
@@ -85,9 +84,9 @@ const News = (props) => {
   const fetchMoreData = async () => {
     // setPage(page+1)
     // console.log(page);
-    let url = `https://newsapi.org/v2/top-headlines?country=${
+    let url = `https://gnews.io/api/v4/top-headlines?country=${
       props.country
-    }&category=${props.category}&apiKey=${props.apiKey}&page=${
+    }&category=${props.category}&apikey=${props.apiKey}&page=${
       page+1
     }&pageSize=${props.pageSize}`;
     setPage(page+1)
@@ -107,7 +106,6 @@ const News = (props) => {
         {capitalizeFirstLetter(props.category)}
       </h2>
       {loading && <Spinner />}
-
       {/* infinite Scroll */}
       <InfiniteScroll
         dataLength={articles.length}
