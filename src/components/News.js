@@ -124,7 +124,7 @@ const News = (props) => {
                     description={
                       ele.description ? ele.description.slice(0, 88) : ""
                     }
-                    imgUrl={ele.urlToImage}
+                    imgUrl={ele.image}
                     newsUrl={ele.url}
                     author={ele.author}
                     date={ele.publishedAt}
